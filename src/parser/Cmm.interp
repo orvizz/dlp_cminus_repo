@@ -1,0 +1,26 @@
+token literal names:
+null
+null
+null
+null
+null
+null
+null
+null
+
+token symbolic names:
+null
+INT_CONSTANT
+REAL_CONSTANT
+CHAR_CONSTANT
+ID
+COMMENT
+ML_COMMENT
+BLANK
+
+rule names:
+program
+
+
+atn:
+[4, 1, 7, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 1, 0, 0, 0, 3, 1, 1, 0, 0, 0, 0]

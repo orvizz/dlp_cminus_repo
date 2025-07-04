@@ -1,0 +1,7 @@
+int f(double p, int e){
+    return e;
+}
+
+void main() {
+    f(8.9, 3);
+}

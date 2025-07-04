@@ -141,7 +141,6 @@ params returns [List<Expression> ast = new ArrayList<>()]:
     | e1=expression { $ast.add($e1.ast); } (',' e2=expression {$ast.add($e2.ast);})*
     ;
 
-
 INT_CONSTANT: [1-9] [0-9]*
             | '0'
             ;

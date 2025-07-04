@@ -1,9 +1,10 @@
 package ast.types;
 
 import ast.Type;
+import ast.statements.AbstractStatement;
 import semantic.Visitor;
 
-public class VoidType implements Type {
+public class VoidType extends AbstractType {
     @Override
     public String toString() {
         return "Void";
@@ -15,4 +16,7 @@ public class VoidType implements Type {
     }
 
 
+    public String typeExpression() {
+        return "Void";
+    }
 }

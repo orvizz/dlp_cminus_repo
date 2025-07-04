@@ -5,4 +5,6 @@ public interface Definition extends Locatable {
     int getScope();
     Type getType();
     String getName();
+    int getOffset();
+
 }

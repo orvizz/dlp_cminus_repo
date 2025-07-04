@@ -22,4 +22,8 @@ public abstract class AbstractBinaryArithmeticExpression extends AbstractExpress
     public Expression getRightExpr() {
         return rightExpr;
     }
+
+    public String getOperator() {
+        return operator;
+    }
 }

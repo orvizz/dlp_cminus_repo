@@ -34,4 +34,8 @@ public class RelationalExpression extends AbstractExpression {
 	public Expression getRightExpr() {
 		return rightExpr;
 	}
+
+	public String getOperator() {
+		return operator;
+	}
 }

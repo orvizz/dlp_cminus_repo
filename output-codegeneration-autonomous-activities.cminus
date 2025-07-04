@@ -1,0 +1,286 @@
+#source "input-codegeneration-autonomous-activities.cminus"
+call main
+halt
+	' * Global variables
+#line 1
+		' * Int i (offset 0)
+#line 1
+		' * Int j (offset 2)
+#line 1
+		' * Int n (offset 4)
+#line 3
+p:
+		' * Parameters
+		' * Local variables
+enter 0
+ret 0 , 0 , 0
+#line 5
+		' * Char c (offset 6)
+#line 7
+f:
+		' * Parameters
+#line 7
+		' * Int n (offset 8)
+#line 7
+		' * Double r (offset 4)
+		' * Local variables
+#line 8
+		' * Double real (offset -4)
+#line 9
+		' * Char c1 (offset -5)
+#line 9
+		' * Char c2 (offset -6)
+enter 6
+#line 10
+push bp
+pushi -5
+addi
+push bp
+pushi 8
+addi
+loadi
+i2b
+storeb
+#line 11
+push bp
+pushi -4
+addi
+push bp
+pushi -5
+addi
+loadb
+b2i
+i2f
+push bp
+pushi 8
+addi
+loadi
+i2f
+addf
+push bp
+pushi 4
+addi
+loadf
+addf
+storef
+#line 12
+call p
+#line 13
+push bp
+pushi -5
+addi
+loadb
+b2i
+ret 2 , 6 , 6
+#line 16
+main:
+		' * Parameters
+		' * Local variables
+#line 20
+		' * Struct pair (offset -3)
+#line 21
+		' * Array<Array<Int>> vector (offset -103)
+enter 103
+#line 23
+pusha 0
+pushi 0
+storei
+#line 24
+pusha 2
+pushi 0
+storei
+#line 25
+label0:
+pusha 0
+loadi
+pushi 10
+lti
+jz label1
+#line 26
+label2:
+pusha 2
+loadi
+pushi 5
+lti
+jz label3
+#line 27
+push bp
+pushi -103
+addi
+pushi 10
+pusha 0
+loadi
+muli
+addi
+pushi 2
+pusha 2
+loadi
+muli
+addi
+pusha 0
+loadi
+pusha 2
+loadi
+addi
+storei
+#line 28
+pusha 2
+pusha 2
+loadi
+pushi 1
+addi
+storei
+jmp label2
+label3:
+#line 30
+pusha 0
+pusha 0
+loadi
+pushi 1
+addi
+storei
+jmp label0
+label1:
+#line 33
+pusha 0
+pushi 0
+storei
+#line 34
+push bp
+pushi -3
+addi
+pushi 2
+addi
+pushb 48
+storeb
+#line 35
+push bp
+pushi -3
+addi
+pushi 0
+addi
+pushi 48
+storei
+#line 36
+label4:
+push bp
+pushi -3
+addi
+pushi 0
+addi
+loadi
+pusha 0
+loadi
+gei
+jz label5
+#line 37
+push bp
+pushi -3
+addi
+pushi 0
+addi
+loadi
+push bp
+pushi -103
+addi
+pushi 10
+pushi 0
+muli
+addi
+pushi 2
+pushi 0
+muli
+addi
+loadi
+eqi
+push bp
+pushi -3
+addi
+pushi 2
+addi
+loadb
+b2i
+not
+or
+pusha 0
+loadi
+pushi 2
+modi
+pushi 0
+eqi
+or
+jz label6
+#line 38
+pushb 116
+outb
+#line 38
+pushb 114
+outb
+#line 38
+pushb 117
+outb
+#line 38
+pushb 101
+outb
+#line 38
+pushb 10
+outb
+jmp label7
+label6:
+#line 40
+pushb 102
+outb
+#line 40
+pushb 97
+outb
+#line 40
+pushb 108
+outb
+#line 40
+pushb 115
+outb
+#line 40
+pushb 101
+outb
+#line 40
+pushb 10
+outb
+label7:
+#line 41
+pusha 0
+pusha 0
+loadi
+pushi 1
+addi
+storei
+jmp label4
+label5:
+#line 43
+pusha 0
+loadi
+pusha 0
+loadi
+i2f
+call f
+outi
+#line 44
+push bp
+pushi -103
+addi
+pushi 10
+pushi 9
+muli
+addi
+pushi 2
+pushf 4.300000190734863
+f2i
+muli
+addi
+pushi 5
+storei
+#line 45
+pushi 1
+pushf 2.200000047683716
+call f
+popi
+ret 0 , 103 , 0

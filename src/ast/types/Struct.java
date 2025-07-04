@@ -3,11 +3,14 @@ package ast.types;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
+import ast.Definition;
 import ast.Type;
+import ast.program.VarDefinition;
 import semantic.Visitor;
 
-public class Struct implements Type {
+public class Struct extends AbstractType {
 	final List<RecordField> fields;
 	
 	public Struct(List<RecordField> fields) {
@@ -43,5 +46,27 @@ public class Struct implements Type {
 
 	public List<RecordField> getFields() {
 		return fields;
+	}
+
+	public String typeExpression() {
+		return "Struct";
+	}
+
+	@Override
+	public Type dot(String name, int line, int column) {
+		Optional<RecordField> var = fields.stream().filter(f -> f.name.equals(name)).findFirst();
+		if(var.isPresent()) {
+			return var.get().type;
+		} else {
+			return new ErrorType(line, column, "Field not found: " + name);
+		}
+	}
+
+	public int getBytes() {
+		return fields.stream().mapToInt(RecordField::getBytes).sum();
+	}
+
+	public RecordField getField(String fieldName) {
+		return fields.stream().filter(f -> f.name.equals(fieldName)).findFirst().orElse(null);
 	}
 }

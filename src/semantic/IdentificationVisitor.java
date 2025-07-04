@@ -25,9 +25,7 @@ public class IdentificationVisitor extends AbstractVisitor<Void, Void> {
     public Void visit(Variable v, Void param) {
         Definition def = symbolTable
                 .find(v.getName());
-        if(def == null) {
-            new ErrorType(v.getLine(), v.getColumn(), "Variable " + v.getName() + " is not defined in the program");
-        } else {
+        if(def != null) {
             v.setDefinition(def);
         }
         return null;

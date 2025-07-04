@@ -1,0 +1,15 @@
+#source "java.io.FileWriter@73035e27"
+main:
+		' * Parameters
+		' * Local variables
+		' * Int a (offset -2)
+enter 2
+push bp
+pushi -2
+addi
+pushi 1
+pushi 2
+addi
+pushi 3
+addi
+storei

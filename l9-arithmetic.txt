@@ -1,0 +1,61 @@
+void main() {
+	int a;
+	double b;
+	char c;
+
+	a = a + a;
+	a = a + b; // Error line 7 (Int - Double)
+	a = a + c; // Error line 8 (Int - Char)
+	a = a + 'a'; // Error line 9 (Int - Char)
+	a = a + 1;
+	a = a + 1.5; // Error line 11 (Int - Double)
+	a = a + d; // Error line 12 (d not defined)
+
+	b = b + a; // Error line 14 (Double - Int)
+	b = b + b;
+	b = b + c; // Error line 16 (Double - Char)
+	b = b + 'a'; // Error line 17 (Double - Char)
+	b = b + 1; // Error line 18 (Double - Int)
+	b = b + 1.5;
+	b = b + d; // Error line 20 (d not defined)
+
+	c = c + a; // Error line 22 (Char - Int)
+	c = c + b; // Error line 23 (Char - Double)
+	c = c + c;
+	c = c + 'a';
+	c = c + 1; // Error line 26 (Char - Int)
+	c = c + 1.5; // Error line 27 (Char - Double)
+	c = c + d; // Error line 28 (d not defined)
+
+	c = 'a' + a; // Error line 30 (Char - Int)
+	c = 'a' + b; // Error line 31 (Char - Double)
+	c = 'a' + c;
+	c = 'a' + 'a';
+	c = 'a' + 1; // Error line 34 (Char - Int)
+	c = 'a' + 1.5; // Error line 35 (Char - Double)
+	c = 'a' + d; // Error line 36 (d not defined)
+
+	a = 1 + a;
+	a = 1 + b; // Error line 39 (Int - Double)
+	a = 1 + c; // Error line 40 (Int - Char)
+	a = 1 + 'a'; // Error line 41 (Int - Char)
+	a = 1 + 1;
+	a = 1 + 1.5; // Error line 43 (Int - Double)
+	a = 1 + d; // Error line 44 (d not defined)
+
+	b = 1.5 + a; // Error line 46 (Double - Int)
+	b = 1.5 + b;
+	b = 1.5 + c; // Error line 48 (Double - Char)
+	b = 1.5 + 'a'; // Error line 49 (Double - Char)
+	b = 1.5 + 1; // Error line 50 (Double - Int)
+	b = 1.5 + 1.5;
+	b = 1.5 + d; // Error line 52 (d not defined)
+
+	a = d + a; // Error line 54 (d not defined)
+	a = d + b; // Error line 55 (d not defined)
+	a = d + c; // Error line 56 (d not defined)
+	a = d + 'a'; // Error line 57 (d not defined)
+	a = d + 1; // Error line 58 (d not defined)
+	a = d + 1.5; // Error line 59 (d not defined)
+	a = d + d; // Error line 60 (d not defined)
+}

@@ -2,6 +2,8 @@ package ast;
 
 public interface Expression extends Locatable {
 
-    public boolean getLvalue();
-    public void setLvalue(boolean value);
+    boolean getLvalue();
+    void setLvalue(boolean value);
+    Type getType();
+    void setType(Type type);
 }

@@ -1,10 +1,22 @@
 struct {
 	int a, b;
 	char c, d;
-	double[10] e, a;
+	double[10] e;
 } record;
 
 void main() {
-    a = a+b[2];
+    int a;
+    a = 3 + 'a';
+    a = 3 + 3;
+    a = 3 + 3.2;
+    a = 'a' + 'a';
+    a = 'a' + 3;
+    a = 'a' + 3.2;
+    a = 3.2 + 'a';
+    a = 3.2 + 3;
+    a = 3.2 + 3.2;
+    a = 3 + b;
+    a = 'a' + b;
+    a = 3.1 + b;
 }
 

@@ -1,0 +1,99 @@
+		' * Char c (offset 0)
+		' * Int a (offset 1)
+main:
+		' * Parameters
+		' * Local variables
+		' * Double r (offset -4)
+		' * Int i (offset -6)
+enter 6
+pusha 0
+pushb 97
+storeb
+pusha 0
+loadb
+outb
+pushb 10
+outb
+pusha 1
+pushi 1
+storei
+push bp
+pushi -6
+addi
+pushb 48
+pushi 3
+storei
+pusha 1
+loadi
+outi
+pushb 32
+outb
+push bp
+pushi -6
+addi
+loadi
+outi
+pushb 10
+outb
+push bp
+pushi -4
+addi
+inf
+storef
+pushi 2
+push bp
+pushi -4
+addi
+loadf
+outf
+pushb 10
+outb
+pushi 3
+pushf 4.5
+outf
+pushb 32
+outb
+pushb 48
+pushf 48.0
+outf
+pushb 32
+outb
+pushi 0
+pushi 1
+outi
+pushb 32
+outb
+pushb 48
+pushb 49
+outi
+pushb 10
+outb
+pushi 1
+pushi 2
+outi
+pushb 32
+outb
+pushi 4
+pushi 3
+outi
+pushb 32
+outb
+pushi 5
+pushi 5
+outi
+pushb 32
+outb
+pushi 1
+pushi 2
+outi
+pushb 32
+outb
+pushi 0
+pushi 3
+outi
+pushb 32
+outb
+pushi 0
+outi
+pushb 10
+outb

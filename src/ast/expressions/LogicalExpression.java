@@ -33,4 +33,8 @@ public class LogicalExpression extends AbstractExpression {
 	public Expression getRightExpr() {
 		return rightExpr;
 	}
+
+	public String getOperator() {
+		return operator;
+	}
 }

@@ -8,6 +8,7 @@ import semantic.Visitor;
 public class RecordField extends AbstractLocatable {
 	final String name;
 	final Type type;
+	int offset;
 
 	public RecordField(int line, int column, String name, Type type) {
 		super(line, column);
@@ -32,5 +33,17 @@ public class RecordField extends AbstractLocatable {
 
 	public Type getType() {
 		return type;
+	}
+
+	public int getBytes() {
+		return type.getBytes();
+	}
+
+	public void setOffset(int offset) {
+		this.offset = offset;
+	}
+
+	public int getOffset() {
+		return offset;
 	}
 }

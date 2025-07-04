@@ -1,0 +1,24 @@
+#source "input-l13-parameters.txt"
+call main
+halt
+	' * Global variables
+f:
+		' * Parameters
+		' * Double p (offset 6)
+		' * Int e (offset 4)
+		' * Local variables
+enter 0
+push bp
+pushi 4
+addi
+loadi
+ret 2 , 0 , 6
+main:
+		' * Parameters
+		' * Local variables
+enter 0
+pushf 8.899999618530273
+pushi 3
+call f
+popi
+ret 0 , 0 , 0
